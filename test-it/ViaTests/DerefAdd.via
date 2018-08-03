@@ -1,0 +1,20 @@
+/*
+DerefAdd.via - Dereference and add two pointers to Int32
+*/
+define(DerefAddTest dv(.VirtualInstrument (
+     c(
+        e(dv(.Int32 2) x)
+        e(dv(.Int32 3) y)
+        e(dv(.Int32) z)
+        e(.DataPointer xRef)
+        e(.DataPointer yRef)
+    )
+    clump(1
+		MakeRefInt32(x xRef)
+		MakeRefInt32(y yRef)
+		DerefAddInt32(xRef yRef z)
+		Printf("z: <%d>\n" z)
+    )
+)))
+
+enqueue(DerefAddTest)

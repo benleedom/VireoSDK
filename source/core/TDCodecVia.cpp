@@ -140,7 +140,7 @@ NIError TDViaParser::ParseREPL()
         // skip the rest of the line.
         _string.EatToEol();
     }
-
+    
     SubString command;
     _string.EatLeadingSpaces();
     TypeRef type = nullptr;

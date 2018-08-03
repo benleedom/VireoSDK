@@ -1200,5 +1200,23 @@ DEFINE_VIREO_END()
 
 #endif
 
+VIREO_FUNCTION_SIGNATURE2(MakeRefInt32, Int32, DataPointer)
+{
+    _Param(1) = _ParamPointer(0);
+    return _NextInstruction();
+}
+
+//------------------------------------------------------------
+VIREO_FUNCTION_SIGNATURE3(DerefAddInt32, Int32*, Int32*, Int32)
+{
+    _Param(2) = *_Param(0) + *_Param(1);
+    return _NextInstruction();
+}
+
+DEFINE_VIREO_BEGIN(RustGPrims)
+    DEFINE_VIREO_FUNCTION_CUSTOM(MakeRefInt32, MakeRefInt32, "p(i(Int32) o(DataPointer))")
+    DEFINE_VIREO_FUNCTION_CUSTOM(DerefAddInt32, DerefAddInt32, "p(i(DataPointer) i(DataPointer) o(Int32))")
+DEFINE_VIREO_END()
+
 }  // namespace Vireo
 
