@@ -10,8 +10,8 @@ define(DerefAddTest dv(.VirtualInstrument (
         e(ptr(Int32) yRef)
     )
     clump(1
-		MakeRefInt32(x xRef)
-		MakeRefInt32(y yRef)
+		MakeRef(x xRef)
+		MakeRef(y yRef)
 		DerefAddInt32(xRef yRef z)
 		Printf("z: <%d>\n" z)
     )
