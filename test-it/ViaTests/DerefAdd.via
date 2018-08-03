@@ -6,8 +6,8 @@ define(DerefAddTest dv(.VirtualInstrument (
         e(dv(.Int32 2) x)
         e(dv(.Int32 3) y)
         e(dv(.Int32) z)
-        e(.DataPointer xRef)
-        e(.DataPointer yRef)
+        e(ptr(Int32) xRef)
+        e(ptr(Int32) yRef)
     )
     clump(1
 		MakeRefInt32(x xRef)

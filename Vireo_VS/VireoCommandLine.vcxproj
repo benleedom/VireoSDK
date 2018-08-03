@@ -29,6 +29,7 @@
     <ClCompile Include="..\source\core\Platform.cpp" />
     <ClCompile Include="..\source\core\Queue.cpp" />
     <ClCompile Include="..\source\core\RefNum.cpp" />
+    <ClCompile Include="..\source\core\RustGPrims.cpp" />
     <ClCompile Include="..\source\core\String.cpp" />
     <ClCompile Include="..\source\core\StringUtilities.cpp" />
     <ClCompile Include="..\source\core\Synchronization.cpp" />
